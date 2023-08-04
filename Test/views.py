@@ -6,6 +6,7 @@ def add_user(request):
     name = request.data.get('name')
     age = request.data.get('age')
     last = request.data.get('last')
-    name_obj = Name.objects.create(name=name,age=age)
+    first = request.data.get('first')
+    name_obj = Name.objects.create(name=name,age=age,last=last,first=first)
     return Response('Success')
 
