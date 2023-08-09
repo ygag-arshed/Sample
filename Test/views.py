@@ -8,6 +8,7 @@ def add_user(request):
         age = request.data.get('age')
         last = request.data.get('last')
         first = request.data.get('first')
+        add = request.data.get('add')
         name_obj = Name.objects.create(name=name,age=age,last=last,first=first)
         return Response('Success')
     return Response('Method Not allowed')
